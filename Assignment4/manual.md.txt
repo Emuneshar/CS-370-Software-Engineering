@@ -1,0 +1,6 @@
+1. Open the app
+2. Enter the check amount into the field labeled check amount
+3. Enter the number of members in your party into the field labeled party size
+3. Press  Compute Tip
+4. The calculator will then calculate the tip and total that each member of your party will need to pay
+5. Thank you for using Tip Calculator :) 
