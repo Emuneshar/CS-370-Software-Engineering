@@ -1,0 +1,42 @@
+# File Source
+	Source:
+		Exist.				
+		Does Not Exist.		[single][property SDNE]
+	Type:
+		File.
+		Directory.			[property directory]
+
+# Destination
+	Directory:
+		Exist.				[if !SDNE]
+		Does Not Exist.		[property DNE]
+
+	Code:
+		None.				[property NoCode]
+		One.				[if !SDNE && !DNE] 
+		Many.				[if !SDNE && !DNE] 
+	
+	Opt:
+		b.					[if !SDNE && !DNE] 
+		f.					[if !SDNE && !DNE]
+		r.					[if !SDNE && !DNE]
+		v.					[if !SDNE && !DNE]
+
+# Codes
+
+	b:
+		successful.			[if !NoCode] 
+		unsuccessful.		[error][if !NoCode]
+	f:
+		successful.			[if !NoCode]
+		unsuccessful.		[error][if !NoCode]
+	r:
+		successful.			[if !NoCode && directory]
+		unsuccessful.		[if !NoCode && directory]
+	v:
+		successful.			[if !NoCode]
+		unsuccessful.		[if !NoCode]
+
+
+
+	
